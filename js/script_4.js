@@ -30,9 +30,7 @@ function filterByYear(entrepreneursArray) {
     }
   }
   // Affichage
-  console.log('Les entrepeneurs nés dans les années 70 :');
   console.log(entrepreneursYear70);
-  
 }
 
 function filterFullName(entrepreneursArray) {
@@ -43,7 +41,6 @@ function filterFullName(entrepreneursArray) {
     entrepreneursFullName.push(entrepreneursArray[index].last + " " + entrepreneursArray[index].first);
   }
   // Affichage
-  console.log('Les noms et prénom des entrepreneurs :');
   console.log(entrepreneursFullName);
   return entrepreneursFullName
 }
@@ -58,9 +55,13 @@ function lastNameSort(entrepreneursArray) {
   console.log(filterFullName(entrepreneursArray).sort());
 }
 
+console.log('Les noms et prénom des entrepreneurs :');
 filterByYear(entrepreneurs);
+console.log('Les noms et prénom des entrepreneurs :');
 filterFullName(entrepreneurs);
+console.log("Quel âge aurait chaque inventeur aujourd'hui ?")
 ageToday(entrepreneurs);
+console.log("Les entrepreneurs trié par ordre alphabétique du nom de famille :")
 lastNameSort(entrepreneurs);
 
 

@@ -12,3 +12,68 @@ const books = [
   { title: 'Voyage au centre de la Terre', id: 4656388, rented: 38 },
   { title: 'Guerre et Paix', id: 748147, rented: 19 }
 ];
+
+function wasRented(books) {
+  for(let index in books) {
+    if((books[index].rented) === 0) {
+      console.log('Non');
+    } else {
+      console.log('Oui');
+    }
+  }
+}
+
+function mostRented(books) {
+  let arrayRented = [];
+
+  for(let index in books) {
+    arrayRented.push(books[index].rented);
+  }
+  let mostRented = arrayRented.sort().reverse()[0];
+  let mostBookRented = books.find( book => book.rented == mostRented)
+  console.log(mostBookRented);
+}
+
+function lessRented(books) {
+  let arrayRented = [];
+
+  for(let index in books) {
+    arrayRented.push(books[index].rented);
+  }
+  let lessRented = arrayRented.sort()[0];
+  let lessBookRented = books.find( book => book.rented == lessRented)
+  console.log(lessBookRented);
+}
+
+function findId(books) {
+  let idFind = books.find(book => book.id === 873495);
+  console.log(idFind);
+}
+
+function deleteBook(books) {
+  let findBook = books.findIndex(book => book.id === 133712)
+  books.splice(findBook, 1);
+  console.log(books)
+}
+
+function sortBooks(books) {
+  
+}
+
+console.log("Est-ce que tous les livres ont été au moins empruntés une fois ?");
+wasRented(books);
+
+console.log("Quel est le livre le plus emprunté ?");
+mostRented(books);
+
+console.log("Quel est le livre le moins emprunté ?");
+lessRented(books);
+
+console.log("Trouve le livre avec l'ID: 873495");
+findId(books);
+
+console.log("Supprime le livre avec l'ID: 133712");
+deleteBook(books);
+
+console.log("Trie les livres par ordre alphabétique (sans celui avec l'ID 133712 car il est supprimé).");
+sortBooks(books);
