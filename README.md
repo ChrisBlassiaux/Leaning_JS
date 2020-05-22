@@ -3,6 +3,17 @@
 
 → Learning_JS : Exercices basiques JS
 
+→ Fonctions codées : 
+```
+- 1 _ Bonjour
+- 2 _ Factorielle
+- 3 _ Pyramide
+- 4 _ Entrepreneurs
+- 5 _ Books
+- 6 _ ADN / ARN
+- 7 _ Acné_Bot
+```
+
 ## 👤  Auteur(s) : 
 
 -- Chris Blassiaux → 
